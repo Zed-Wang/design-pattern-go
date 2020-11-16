@@ -1,17 +1,10 @@
 package singleton
 
-import "sync"
-
-var (
-	lazySingleton *Singleton
-	once          = &sync.Once{}
-)
+var lazySingleton *Singleton
 
 func GetLazyInstance() *Singleton {
 	if lazySingleton == nil {
-		once.Do(func() {
-			lazySingleton = &Singleton{}
-		})
+		lazySingleton = &Singleton{}
 	}
 	return lazySingleton
 }
