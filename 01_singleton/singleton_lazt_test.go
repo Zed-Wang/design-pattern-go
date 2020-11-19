@@ -1,7 +1,7 @@
 package singleton_test
 
 import (
-	singleton "design-pattern-go/singleton_1"
+	singleton "design-pattern-go/01_singleton"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
